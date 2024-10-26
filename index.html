@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia del Leñador y la Princesa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            color: #F0F8FF;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #141e30, #243b55);
+        }
+
+        .cover, .chapter {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #e6c5b8;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: none;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .cover h1, .chapter h2 {
+            font-size: 48px;
+            font-family: 'Great Vibes', cursive;
+            color: #ffdfba;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 15px rgba(255, 223, 186, 0.8);
+        }
+
+        .cover {
+            background: linear-gradient(135deg, #1a2a4a, #3b6f91);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #FFD7BA;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .cta-button, .nav-button {
+            margin-top: 20px;
+            background-color: #9EADBA;
+            border: none;
+            color: #243b55;
+            font-size: 16px;
+            padding: 8px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Georgia', serif;
+        }
+
+        .cta-button:hover, .nav-button:hover {
+            background-color: #7D9098;
+        }
+
+        .chapter {
+            text-align: justify;
+            font-size: 20px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            animation: fadeIn 1s ease;
+            color: #F5F5F5;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        .chapter p {
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.1);
+        }
+
+        .chapter .nav-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            width: 2px;
+            height: 2px;
+            animation: twinkle 3s infinite alternate ease-in-out;
+            opacity: 0.8;
+        }
+
+        @keyframes twinkle {
+            from { opacity: 0.6; }
+            to { opacity: 1; }
+        }
+
+        #chapter-1 { background: linear-gradient(135deg, #2c3e50, #4ca1af); }
+        #chapter-2 { background: linear-gradient(135deg, #1e3c72, #2a5298); }
+        #chapter-3 { background: linear-gradient(135deg, #3a1c71, #d76d77); }
+        #chapter-4 { background: linear-gradient(135deg, #1f4037, #99f2c8); }
+        #chapter-5 { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+        #chapter-6 { background: linear-gradient(135deg, #614385, #516395); }
+    </style>
+</head>
+<body>
+
+    <div class="cover" id="cover">
+        <h1>El Leñador sombrio y la Princesa</h1>
+        <p>Por Yeye</p>
+        <button class="cta-button" onclick="showChapter(1)">comenzar</button>
+    </div>
+
+    <div class="chapter" id="chapter-1">
+        <h2>Capítulo 1: El Encuentro Inesperado</h2>
+        <p>
+            El leñador vivía una vida solitaria en el bosque, apartado del bullicio del pueblo. Pasaba sus días cortando madera y sus noches junto al fuego, en completo silencio.
+            Pero todo cambió el día que vio por primera vez a la princesa. Estaba en el mercado del pueblo, recogiendo provisiones, cuando una figura radiante apareció ante él.
+            La princesa, con su belleza inigualable, dejó al leñador sin palabras. <br><br>
+            A partir de ese momento, su vida ya no sería la misma.
+        </p>
+        <div class="nav-container">
+            <button class="nav-button" onclick="showChapter(2)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="chapter" id="chapter-2">
+        <h2>Capítulo 2: El Inicio de una Obsesión</h2>
+        <p>
+            Día tras día, el leñador volvía al mercado, esperando verla de nuevo. Al principio, se convencía a sí mismo de que solo era curiosidad,
+            pero pronto se dio cuenta de que estaba completamente fascinado por ella. No podía pensar en otra cosa, y cada vez que la veía, su corazón latía más rápido. <br><br>
+            No sabía si era amor o locura.
+        </p>
+        <div class="nav-container">
+            <button class="nav-button" onclick="showChapter(1)">Anterior</button>
+            <button class="nav-button" onclick="showChapter(3)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="chapter" id="chapter-3">
+        <h2>Capítulo 3: Los Sabios del Pueblo</h2>
+        <p>
+            Incapaz de entender lo que le sucedía, el leñador decidió consultar a los sabios del pueblo. Se dirigió a un anciano que vivía en las afueras y le contó lo que estaba sintiendo.
+            El sabio, con una sonrisa en el rostro, le dijo: "Lo que sientes no es una enfermedad, joven. Es algo mucho más profundo. Estás enamorado." <br><br>
+            El leñador no quiso creerle, pero las palabras del sabio resonaban en su mente.
+        </p>
+        <div class="nav-container">
+            <button class="nav-button" onclick="showChapter(2)">Anterior</button>
+            <button class="nav-button" onclick="showChapter(4)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="chapter" id="chapter-4">
+        <h2>Capítulo 4: El Primer Contacto</h2>
+        <p>
+            Un día, mientras el leñador la miraba desde lejos, la princesa se dio cuenta de su presencia. Decidida a descubrir qué ocurría, se acercó a él. <br><br>
+            "¿Te debo algo o quieres preguntarme algo?", le dijo con una sonrisa. <br><br>
+            El leñador, nervioso, apenas pudo articular las palabras. "Cada vez que te veo, siento que mi corazón está por salirse de mi pecho", le confesó, ruborizado. <br><br>
+            La princesa, sorprendida, sonrió aún más.
+        </p>
+        <div class="nav-container">
+            <button class="nav-button" onclick="showChapter(3)">Anterior</button>
+            <button class="nav-button" onclick="showChapter(5)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="chapter" id="chapter-5">
+        <h2>Capítulo 5: La Confusión</h2>
+        <p>
+            Tras ese encuentro, el leñador no podía dejar de pensar en lo que había dicho. ¿Realmente estaba enamorado de ella? ¿O simplemente estaba confundido? Decidió volver al bosque, intentando aclarar sus pensamientos. Pero, por más que lo intentaba, la imagen de la princesa seguía invadiendo su mente. <br><br>
+            Sabía que debía verla de nuevo.
+        </p>
+        <div class="nav-container">
+            <button class="nav-button" onclick="showChapter(4)">Anterior</button>
+            <button class="nav-button" onclick="showChapter(6)">Siguiente</button>
+        </div>
+    </div>
+
+    <div class="chapter" id="chapter-6">
+        <h2>Capítulo 6: La Declaración</h2>
+        <p>
+            Pasaron días, y el leñador volvió a verla. Esta vez, decidido a no dejar que sus nervios lo dominaran, se acercó a ella y le dijo: "He estado pensando en ti todos los días. Y aunque suene loco, creo que te amo."
+        </p>
+        <div class="nav-container">
+            <button class="nav-button" onclick="showChapter(5)">Anterior</button>
+            <button class="nav-button" onclick="showCover()">Volver a la Portada</button>
+        </div>
+    </div>
+
+    <div class="stars"></div>
+
+    <script>
+        function showCover() {
+            document.querySelectorAll('.chapter').forEach(chapter => chapter.style.display = 'none');
+            document.getElementById('cover').style.display = 'flex';
+        }
+
+        function showChapter(chapterNumber) {
+            document.querySelectorAll('.chapter, .cover').forEach(el => el.style.display = 'none');
+            document.getElementById('chapter-' + chapterNumber).style.display = 'flex';
+        }
+
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.animationDuration = Math.random() * 3 + 2 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        showCover();
+        createStars();
+    </script>
+
+</body>
+</html>
+
+
+
+
